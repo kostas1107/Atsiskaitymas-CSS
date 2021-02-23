@@ -1,0 +1,27 @@
+.header {
+    &__nav {
+        @media (max-width: $md) {
+            display: none;
+        }
+    }
+    &__list {
+        list-style: none;
+        display: flex;
+    }
+    &__link {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: rem(32);
+        text-align: center;
+        color: $primary-color;
+        padding: 0 20px;
+        margin: 0 20px;
+        transition: all ease 0.3s;
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+
+}
