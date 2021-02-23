@@ -1,0 +1,54 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    @media (max-width: $md) {
+        padding-bottom: 20px;
+    }
+    &__brand {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: rem(40);
+        line-height: rem(48);
+        color: $primary-color;
+        padding: 0px 10px;
+    }
+    &__button {
+        @include button;
+        color: $primary-color;
+        transition: ease all 0.3s;
+        @media (max-width: $md) {
+            display: none;
+        }
+        &:hover {
+            color: #ffffff;
+            background: $secondary-color;
+        }
+    }
+    &__mobile-button {
+        background: none;
+        border: 1px solid rgba(17, 17, 17, 0.303074);
+        border-radius: 4px;
+        cursor: pointer;
+        display: none;
+        transition: ease all 0.3s;
+        padding: 0;
+        outline: none;
+        &:hover {
+            background: $secondary-color;
+        }
+        & i {
+            color: $secondary-color;
+            font-size: rem(24);
+            padding: 12px 13px;
+            &:hover {
+                color: #ffffff;
+            }
+        }
+        @media (max-width: $md) {
+            display: block;
+        }
+    }
+}
